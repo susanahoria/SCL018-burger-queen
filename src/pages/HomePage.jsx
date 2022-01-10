@@ -1,3 +1,5 @@
+import app from "../firebase";
+
 const HomePage = () => {
   return <h3>HomePage</h3>;
 };
