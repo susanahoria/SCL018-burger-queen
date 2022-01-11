@@ -1,0 +1,48 @@
+@media (max-width: 2160px) {
+  .home {
+    background-image: url(home-copia.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 5% 10% 15% 5% 20% 5% 20% 5% 15%;
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    grid-row: 2/5;
+    grid-column: 3/6;
+    font-size: 90px;
+    align-content: center;
+    color: #fa04fb;
+    font-family: "Cabin Sketch", cursive;
+  }
+
+  .button-chef {
+    grid-row: 5/6;
+    grid-column: 3/5;
+    width: 100%;
+  }
+
+  .button-waiter {
+    grid-row: 7/8;
+    grid-column: 3/5;
+  }
+  .button-waiter img,
+  .button-chef img {
+    width: 45%;
+  }
+
+  .button-waiter,
+  .button-chef {
+    width: 40%;
+    height: 100%;
+    border: none;
+    background-color: #fb04fb6c;
+    border-bottom-right-radius: 40px 40px;
+    cursor: pointer;
+  }
+}
