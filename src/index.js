@@ -4,14 +4,15 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
-import AboutPage from "./pages/AboutPage";
+import Kitchen from "./pages/kitchen/Kitchen";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/about" element={<AboutPage />}></Route>
+        <Route path="/kitchen" element={<Kitchen />}></Route>
+        <Route path="/order" element={<Order />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

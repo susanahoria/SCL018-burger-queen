@@ -1,48 +1,85 @@
-@media (max-width: 2160px) {
-  .home {
-    background-image: url(home-copia.png);
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 5% 10% 15% 5% 20% 5% 20% 5% 15%;
-  }
+.home {
+  background-image: url(home-copia.png);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 100vh;
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: 20% 20% 10% 10% 20% 20%;
+  grid-template-rows: 5% 10% 15% 5% 10% 10% 5% 10% 10% 5% 15%;
+}
 
-  .welcome {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    grid-row: 2/5;
-    grid-column: 3/6;
-    font-size: 90px;
-    align-content: center;
-    color: #fa04fb;
-    font-family: "Cabin Sketch", cursive;
-  }
+.welcome {
+  display: flex;
+  justify-content: flex-start;
+  grid-row: 2/5;
+  grid-column: 4/7;
+  font-size: 90px;
+  align-content: center;
+  color: #fa04fb;
+  font-family: "Cabin Sketch", cursive;
+}
 
-  .button-chef {
-    grid-row: 5/6;
-    grid-column: 3/5;
-    width: 100%;
-  }
+.inputs {
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 1px 10px 25px black; */
+}
 
-  .button-waiter {
-    grid-row: 7/8;
-    grid-column: 3/5;
-  }
-  .button-waiter img,
-  .button-chef img {
-    width: 45%;
-  }
+input {
+  font-family: "Cabin Sketch", cursive;
+  background-color: #fb04fb6c;
+  border: none;
+  color: rgb(231, 237, 241);
+  /* box-shadow: 1px 10px 25px black; */
+  font-size: 20px;
+  width: 350px;
+  height: 50%;
+}
 
-  .button-waiter,
-  .button-chef {
-    width: 40%;
-    height: 100%;
-    border: none;
-    background-color: #fb04fb6c;
-    border-bottom-right-radius: 40px 40px;
-    cursor: pointer;
-  }
+::placeholder {
+  color: rgb(231, 237, 241);
+  font-size: 20px;
+}
+
+.form-chef {
+  display: flex;
+  grid-row: 5/7;
+  grid-column: 4/7;
+  flex-direction: row;
+}
+
+.form-waiter {
+  display: flex;
+  flex-direction: row;
+  grid-row: 8/10;
+  grid-column: 4/7;
+}
+
+.button-waiter img,
+.button-chef img {
+  width: 40%;
+}
+
+.button-chef {
+  background-image: url(chef.png);
+  background-size: 30%;
+  background-attachment: unset;
+}
+
+.button-waiter {
+  background-image: url(waiter.png);
+  background-size: 30%;
+  background-attachment: unset;
+}
+
+.button-waiter,
+.button-chef {
+  clip-path: polygon(68% 0, 100% 50%, 68% 100%, 0% 100%, 0% 0%);
+  width: 25%;
+  height: 100%;
+  border: none;
+  background-color: #fb04fb6c;
+  border-bottom-right-radius: 40px 40px;
+  cursor: pointer;
 }
