@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import Kitchen from "./pages/kitchen/Kitchen";
+import Order from "./pages/order/Order";
+import Admin from "./pages/admin/Admin";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +15,7 @@ ReactDOM.render(
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/kitchen" element={<Kitchen />}></Route>
         <Route path="/order" element={<Order />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
