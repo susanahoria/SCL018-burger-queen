@@ -1,85 +1,90 @@
-.home {
-  background-image: url(home-copia.png);
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  height: 100vh;
-  display: grid;
-  justify-items: stretch;
-  grid-template-columns: 20% 20% 10% 10% 20% 20%;
-  grid-template-rows: 5% 10% 15% 5% 10% 10% 5% 10% 10% 5% 15%;
-}
+@media (max-width: 1024px) {
+  .home {
+    background-image: url(home-copia.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 20% 20% 10% 10% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
 
-.welcome {
-  display: flex;
-  justify-content: flex-start;
-  grid-row: 2/5;
-  grid-column: 4/7;
-  font-size: 90px;
-  align-content: center;
-  color: #fa04fb;
-  font-family: "Cabin Sketch", cursive;
-}
+  .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/1;
+    grid-column: 2/5;
+    font-size: 30px;
+    color: #fa04fb;
+    font-family: "Press Start 2P", cursive;
+  }
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  /* box-shadow: 1px 10px 25px black; */
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
-input {
-  font-family: "Cabin Sketch", cursive;
-  background-color: #fb04fb6c;
-  border: none;
-  color: rgb(231, 237, 241);
-  /* box-shadow: 1px 10px 25px black; */
-  font-size: 20px;
-  width: 350px;
-  height: 50%;
-}
+  #buttons {
+    background-color: #fb04fbcb;
+    font-family: "Press Start 2P", cursive;
+    color: rgba(0, 0, 0, 0.651);
+    border: none;
+    display: flex;
+    justify-content: space-around;
+  }
 
-::placeholder {
-  color: rgb(231, 237, 241);
-  font-size: 20px;
-}
+  .login-user {
+    grid-column: 4/9;
+    grid-row: 1/13;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    background-color: #34276e6c;
+  }
 
-.form-chef {
-  display: flex;
-  grid-row: 5/7;
-  grid-column: 4/7;
-  flex-direction: row;
-}
+  .formUsers {
+    grid-row: 2/5;
+    grid-column: 2/5;
+    display: flex;
+  }
 
-.form-waiter {
-  display: flex;
-  flex-direction: row;
-  grid-row: 8/10;
-  grid-column: 4/7;
-}
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 1px 10px 25px black; */
+  }
 
-.button-waiter img,
-.button-chef img {
-  width: 40%;
-}
+  input {
+    font-family: "Cabin Sketch", cursive;
+    border: none;
+    color: rgb(231, 237, 241);
+    /* box-shadow: 1px 10px 25px black; */
+    font-size: 20px;
+    width: 350px;
+    height: 50%;
+  }
 
-.button-chef {
-  background-image: url(chef.png);
-  background-size: 30%;
-  background-attachment: unset;
-}
+  ::placeholder {
+    color: rgb(231, 237, 241);
+    font-size: 20px;
+  }
+  .gap {
+    grid-row: 2/2;
+    grid-column: 2/5;
+    margin: -35px;
+    background-color: #e70be7;
+    box-shadow: 0px 1px 10px 2px #fa04fb;
+  }
 
-.button-waiter {
-  background-image: url(waiter.png);
-  background-size: 30%;
-  background-attachment: unset;
-}
-
-.button-waiter,
-.button-chef {
-  clip-path: polygon(68% 0, 100% 50%, 68% 100%, 0% 100%, 0% 0%);
-  width: 25%;
-  height: 100%;
-  border: none;
-  background-color: #fb04fb6c;
-  border-bottom-right-radius: 40px 40px;
-  cursor: pointer;
+  /* #button-chef {
+    font-family: "Cabin Sketch", cursive;
+    font-size: 45px;
+    color: rgb(182, 38, 127);
+    background-image: url(chef.png);
+    background-size: 10%;
+    background-attachment: unset;
+  } */
 }

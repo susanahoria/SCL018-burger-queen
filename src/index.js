@@ -7,6 +7,7 @@ import HomePage from "./pages/home/HomePage";
 import Kitchen from "./pages/kitchen/Kitchen";
 import Order from "./pages/order/Order";
 import Admin from "./pages/admin/Admin";
+import "bulma/css/bulma.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
