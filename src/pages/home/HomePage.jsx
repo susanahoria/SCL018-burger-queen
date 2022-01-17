@@ -6,9 +6,16 @@ import chef from "./chef.png";
 import waitress from "./waitress.png";
 import admin from "./admin.png";
 
+import UserForm from "../../component/form";
+
 const HomePage = () => {
   // const [user, setUser] = useState(null);
-  const handleClick = (e) => {};
+
+  const [form, setForm] = useState();
+  const onClick = (e) => {
+    e.preventDefault();
+    setForm(!form);
+  };
 
   return (
     <>
@@ -17,35 +24,48 @@ const HomePage = () => {
           <h1 className="welcome">HEY THERE!</h1>
           <hr className="gap" />
           <form className="formUsers">
-            <button
-              onClick={handleClick}
-              className="button is-large is-rounded"
-              id="buttons"
-            >
-              <span className="icon is-large">
-                <i>
-                  <img src={chef} alt="chef" />
-                </i>
-              </span>
-              <span>CHEF</span>
-            </button>
-
-            <button className="button is-large is-rounded" id="buttons">
-              <span className="icon is-large">
-                <i>
-                  <img src={waitress} alt="waiter" />
-                </i>
-              </span>
-              <span>WAITER</span>
-            </button>
-            <button className="button is-large is-rounded" id="buttons">
-              <span className="icon is-large">
-                <i>
-                  <img src={admin} alt="admin" />
-                </i>
-              </span>
-              <span className="fas fa-heading fa-lg">ADMIN</span>
-            </button>
+            {form ? (
+              <UserForm />
+            ) : (
+              <>
+                <button
+                  onClick={onClick}
+                  className="button is-large"
+                  id="buttons"
+                >
+                  <span className="icon is-large">
+                    <i>
+                      <img src={chef} alt="chef" />
+                    </i>
+                  </span>
+                  <span>CHEF</span>
+                </button>
+                <button
+                  onClick={onClick}
+                  className="button is-large "
+                  id="buttons"
+                >
+                  <span className="icon is-large">
+                    <i>
+                      <img src={waitress} alt="waiter" />
+                    </i>
+                  </span>
+                  <span>WAITER</span>
+                </button>
+                <button
+                  onClick={onClick}
+                  className="button is-large "
+                  id="buttons"
+                >
+                  <span className="icon is-large">
+                    <i>
+                      <img src={admin} alt="admin" />
+                    </i>
+                  </span>
+                  <span>ADMIN</span>
+                </button>
+              </>
+            )}
           </form>
         </section>
       </div>
