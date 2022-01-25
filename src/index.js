@@ -26,7 +26,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/chef" element={<Kitchen />}></Route>
-        <Route path="/order" element={<Order />}></Route>
+        <Route path="/waiter" element={<Order />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
     </BrowserRouter>

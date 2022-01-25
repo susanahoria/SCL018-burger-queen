@@ -40,6 +40,10 @@
   justify-content: space-evenly;
 }
 
+.hey-there {
+  width: 50%;
+}
+
 .container-buttons {
   grid-column: 4/9;
   grid-row: 1/13;

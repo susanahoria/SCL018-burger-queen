@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./form.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import firebase from "../firebase";
+import firebase from "../../firebase";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 const UserForm = () => {

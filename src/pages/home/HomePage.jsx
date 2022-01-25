@@ -1,10 +1,7 @@
 import { useState } from "react";
 import "./home.css";
-import chef from "./chef.png";
-import waitress from "./waitress.png";
 import home from "./home-burger.png";
-import admin from "./admin.png";
-import UserForm from "../../component/UserForm";
+import UserForm from "../../component/form/UserForm";
 
 const HomePage = () => {
   const [form, setForm] = useState(false);
@@ -21,7 +18,7 @@ const HomePage = () => {
         <h2 className="burger">BURGER</h2>
         <section className="login-user">
           <div className="nes-container with-title formUsers">
-            <p className="title">HEY THERE!!</p>
+            <p className="title hey-there">HEY THERE!!</p>
             {form ? (
               <UserForm />
             ) : (

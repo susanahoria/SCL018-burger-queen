@@ -1,0 +1,50 @@
+.waiter-view {
+  background-image: url(/src/component/images/wallpaper-views.png);
+  display: grid;
+  grid-template-columns: 5% 5% 10% 9% 2% 9% 5% 5% 10% 10% 20% 5% 5%;
+  grid-template-rows: 5% 10% 5% 2% 4% 14% 20% 10% 3% 7% 5% 10% 5%;
+  height: 100vh;
+}
+
+.button-breakfast {
+  grid-column: 3/5;
+  grid-row: 3/5;
+}
+
+.button-burgers {
+  grid-column: 6/9;
+  grid-row: 3/5;
+}
+
+.breakfast-menu {
+  grid-row: 6/12;
+  grid-column: 3/9;
+}
+
+.menu {
+  grid-column: 2/13;
+  grid-row: 2/13;
+  background-color: #8db3b8ce;
+}
+
+.final-order {
+  grid-column: 10/12;
+  grid-row: 3/12;
+  background-color: #aedea9c5;
+}
+
+.order {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 5% 5% 7% 3%;
+  height: 100%;
+}
+
+.total {
+  grid-row: 5/6;
+}
+
+.done-button {
+  grid-column: 1/6;
+  grid-row: 7/9;
+}
