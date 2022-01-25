@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import firebase from "../../firebase";
+import "./admin.css";
 
 const Admin = () => {
   const [name, setName] = useState("");
@@ -28,59 +29,80 @@ const Admin = () => {
       setEmail("");
       setPassword("");
     } catch (err) {
+      alert("complete campos");
       console.log(err.message);
     }
   };
 
   return (
     <>
-      <h1>HEY ADMIN!</h1>
-      <form onSubmit={submitHandler}>
-        <label>
-          Name:
-          <input
-            type="name"
-            id="name"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <label>
-          Role:
-          <select onChange={(e) => setRole(e.target.value)} value={role}>
-            <option value="Role" selected disabled>
-              Role
-            </option>
-            <option value="Chef">Chef</option>
-            <option value="Waiter">Waiter</option>
-            <option value="Admin">Admin</option>
-          </select>
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            id="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label htmlFor="password">
-          Password:
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <button type="submit" className="" id="buttonChef">
-          Send
-        </button>
-      </form>
+      <section className="admin-view">
+        <div class="nes-container with-title is-centered form-admin">
+          <p class="title hey-admin">HEY ADMIN!</p>
+          <form onSubmit={submitHandler}>
+            <div className="inputs-admin">
+              <label htmlFor="name">
+                Name:
+                <input
+                  className="nes-input"
+                  type="name"
+                  id="name"
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </label>
+
+              <label htmlFor="role">
+                Role:
+                <div className="nes-select">
+                  <select
+                    className="nes-input"
+                    onChange={(e) => setRole(e.target.value)}
+                    value={role}
+                  >
+                    <option value="" disabled selected hidden>
+                      Role...
+                    </option>
+                    <option value="CHEF">Chef</option>
+                    <option value="WAITER">Waiter</option>
+                    <option value="ADMIN">Admin</option>
+                  </select>
+                </div>
+              </label>
+              <label htmlFor="email">
+                Email:
+                <input
+                  className="nes-input"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </label>
+              <label htmlFor="password">
+                Password:
+                <input
+                  className="nes-input"
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </label>
+              <button
+                type="submit"
+                className="nes-btn is-success button-admin"
+                id="buttonChef"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </>
   );
 };

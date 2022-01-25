@@ -1,0 +1,31 @@
+.admin-view {
+  background-image: url(/src/component/wallpaper-views.png);
+  display: grid;
+  grid-template-columns: 20% 20% 10% 10% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  height: 100vh;
+}
+
+.hey-admin {
+  width: 300px;
+}
+
+.button-admin {
+  margin-top: 50px;
+}
+
+.form-admin {
+  height: 100%;
+  grid-column: 2/6;
+  grid-row: 1/5;
+  margin-top: 5%;
+  background-color: #8db3b8ce;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-admin {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}

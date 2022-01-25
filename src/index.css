@@ -3,4 +3,6 @@ body {
   padding: 0;
   height: 100%;
   overflow: hidden;
+  font-family: "Press Start 2P", cursive;
+  background-color: #9ceaff;
 }

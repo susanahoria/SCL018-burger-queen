@@ -1,16 +1,6 @@
 .login {
   display: flex;
   flex-direction: column;
-}
-
-#loginButton {
-  background-color: #fb04fbcb;
-  font-family: "Press Start 2P", cursive;
-  color: rgba(0, 0, 0, 0.651);
-  border: none;
-}
-
-::placeholder {
-  color: rgb(19, 69, 102);
-  font-size: 25px;
+  height: 100%;
+  margin-top: 20%;
 }

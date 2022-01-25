@@ -1,17 +1,13 @@
-import firebase from "../../firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
 import "./home.css";
 import chef from "./chef.png";
 import waitress from "./waitress.png";
+import home from "./home-burger.png";
 import admin from "./admin.png";
-
-import UserForm from "../../component/form";
+import UserForm from "../../component/UserForm";
 
 const HomePage = () => {
-  // const [user, setUser] = useState(null);
-
-  const [form, setForm] = useState();
+  const [form, setForm] = useState(false);
   const onClick = (e) => {
     e.preventDefault();
     setForm(!form);
@@ -20,53 +16,30 @@ const HomePage = () => {
   return (
     <>
       <div className="home">
+        <h2 className="durrr">DURRR</h2>
+        <img src={home} alt="burger-image" className="burger-img" />
+        <h2 className="burger">BURGER</h2>
         <section className="login-user">
-          <h1 className="welcome">HEY THERE!</h1>
-          <hr className="gap" />
-          <form className="formUsers">
+          <div className="nes-container with-title formUsers">
+            <p className="title">HEY THERE!!</p>
             {form ? (
               <UserForm />
             ) : (
               <>
-                <button
-                  onClick={onClick}
-                  className="button is-large"
-                  id="buttons"
-                >
-                  <span className="icon is-large">
-                    <i>
-                      <img src={chef} alt="chef" />
-                    </i>
-                  </span>
-                  <span>CHEF</span>
-                </button>
-                <button
-                  onClick={onClick}
-                  className="button is-large "
-                  id="buttons"
-                >
-                  <span className="icon is-large">
-                    <i>
-                      <img src={waitress} alt="waiter" />
-                    </i>
-                  </span>
-                  <span>WAITER</span>
-                </button>
-                <button
-                  onClick={onClick}
-                  className="button is-large "
-                  id="buttons"
-                >
-                  <span className="icon is-large">
-                    <i>
-                      <img src={admin} alt="admin" />
-                    </i>
-                  </span>
-                  <span>ADMIN</span>
-                </button>
+                <div className="button-home">
+                  <button onClick={onClick} className="nes-btn is-error">
+                    <span>CHEF</span>
+                  </button>
+                  <button onClick={onClick} className="nes-btn is-error">
+                    <span>WAITER</span>
+                  </button>
+                  <button onClick={onClick} className="nes-btn is-error">
+                    <span>ADMIN</span>
+                  </button>
+                </div>
               </>
             )}
-          </form>
+          </div>
         </section>
       </div>
     </>
