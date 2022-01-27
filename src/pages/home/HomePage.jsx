@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <div className="home">
-        <img src={home} alt="burger-image" className="burger-img" />
+        <img src={home} alt="burger" className="burger-img" />
         <h2 className="durrr">DURRR</h2>
         <h2 className="burger">BURGER</h2>
         <section className="login-user">

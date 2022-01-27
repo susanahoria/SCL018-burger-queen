@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./breakfast.css";
 
 const BreakfastMenu = ({ order, setOrder }) => {
