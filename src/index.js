@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import Kitchen from "./pages/kitchen/Kitchen";
-import Order from "./pages/order/Order";
+import OrderPage from "./pages/order/OrderPage";
 import Admin from "./pages/admin/Admin";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import firebase from "./firebase";
@@ -26,7 +26,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/chef" element={<Kitchen />}></Route>
-        <Route path="/waiter" element={<Order />}></Route>
+        <Route path="/waiter" element={<OrderPage />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
     </BrowserRouter>
