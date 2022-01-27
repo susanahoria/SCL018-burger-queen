@@ -9,66 +9,98 @@
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
-.burger-img {
-  grid-row: 3/4;
-  grid-column: 1/4;
-  align-self: center;
-  image-rendering: pixelated;
-}
-.durrr {
-  grid-row: 1/1;
-  grid-column: 2/2;
-  color: #ff6b72;
-  font-size: 60px;
-  align-self: end;
-  margin-bottom: -30%;
-  margin-left: -38%;
-}
-.burger {
-  grid-row: 5/6;
-  grid-column: 2/2;
-  color: #ffb26b;
-  font-size: 60px;
-  margin-left: -50%;
-  margin-top: -30%;
+@media (min-width: 1024px) {
+  .burger-img {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    width: 80%;
+    margin-left: 10%;
+    align-self: center;
+    image-rendering: pixelated;
+  }
+  .durrr {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    color: #ff6b72;
+    font-size: 60px;
+    align-self: unset;
+    margin-left: -20%;
+    margin-top: 20%;
+  }
+  .burger {
+    grid-row: 5/6;
+    grid-column: 2/2;
+    color: #ffb26b;
+    font-size: 60px;
+    margin-left: -30%;
+  }
+
+  .button-home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .hey-there {
+    width: 50%;
+  }
+
+  .container-buttons {
+    grid-column: 4/9;
+    grid-row: 1/13;
+  }
+
+  .login-user {
+    grid-column: 4/9;
+    grid-row: 1/13;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    /* background-image: url(../../components/images/wallpaper-views.png); */
+    background-color: #8db3b8;
+    margin: 5%;
+  }
+
+  .formUsers {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/6;
+    grid-column: 1/6;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.button-home {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-evenly;
-}
+@media (max-width: 1024px) {
+  .burger-img {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    align-self: center;
+    image-rendering: pixelated;
+  }
 
-.hey-there {
-  width: 50%;
-}
+  .burger {
+    grid-row: 5/6;
+    grid-column: 2/2;
+    color: #ffb26b;
+    font-size: 60px;
+    margin-left: -50%;
+    margin-top: -30%;
+  }
 
-.container-buttons {
-  grid-column: 4/9;
-  grid-row: 1/13;
-}
-
-.login-user {
-  grid-column: 4/9;
-  grid-row: 1/13;
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  background-color: #8db3b8;
-  margin: 5%;
-}
-
-.formUsers {
-  display: flex;
-  flex-direction: column;
-  grid-row: 1/6;
-  grid-column: 1/6;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
+  .durrr {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    color: #ff6b72;
+    font-size: 60px;
+    align-self: end;
+    margin-bottom: -30%;
+    margin-left: -38%;
+  }
 }

@@ -22,6 +22,7 @@ const Admin = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    //validar campos
     try {
       const data = await signUp(email, password);
       await insertToDB(data.user.uid);

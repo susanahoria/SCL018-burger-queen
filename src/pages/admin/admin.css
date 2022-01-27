@@ -1,5 +1,5 @@
 .admin-view {
-  background-image: url(/src/component/images/wallpaper-views.png);
+  background-image: url(/src/components/images/wallpaper-views.png);
   display: grid;
   grid-template-columns: 20% 20% 10% 10% 20% 20%;
   grid-template-rows: 20% 20% 20% 20% 20%;

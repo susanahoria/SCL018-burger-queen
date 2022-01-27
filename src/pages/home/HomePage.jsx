@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./home.css";
 import home from "./home-burger.png";
-import UserForm from "../../component/form/UserForm";
+import UserForm from "../../components/form/UserForm";
 
 const HomePage = () => {
   const [form, setForm] = useState(false);
@@ -13,8 +13,8 @@ const HomePage = () => {
   return (
     <>
       <div className="home">
-        <h2 className="durrr">DURRR</h2>
         <img src={home} alt="burger-image" className="burger-img" />
+        <h2 className="durrr">DURRR</h2>
         <h2 className="burger">BURGER</h2>
         <section className="login-user">
           <div className="nes-container with-title formUsers">
