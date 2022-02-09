@@ -21,10 +21,10 @@ const BurgerMenu = ({ order, setOrder }) => {
     setCheese(false);
   };
   return (
-    <div>
+    <div className="container-list">
       <p>Burgers!</p>
       <label>
-        <span>Beef burger</span>
+        <span className="item">Beef burger</span>
         <span>$10</span>
         <button
           className="add-button"
@@ -33,7 +33,6 @@ const BurgerMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span>Chicken burger</span>
         <span>$10</span>
@@ -44,7 +43,6 @@ const BurgerMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span>veggie burger</span>
         <span>$10</span>
@@ -55,10 +53,8 @@ const BurgerMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
-        Extra:
-        <br />
+        ExtraEgg:
         <input
           type="checkbox"
           className="nes-checkbox"
@@ -70,8 +66,8 @@ const BurgerMenu = ({ order, setOrder }) => {
         <span>Egg</span>
         <span>$1</span>
       </label>
-
       <label>
+        ExtraCheese:
         <input
           type="checkbox"
           className="nes-checkbox"
@@ -94,7 +90,6 @@ const BurgerMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span>Onion ring</span>
         <span>$5</span>
@@ -116,7 +111,6 @@ const BurgerMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span>Water</span>
         <span>$7</span>

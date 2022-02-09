@@ -19,7 +19,6 @@ const BreakfastMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span className="item">Cappuccino</span>
         <span className="price">$7</span>
@@ -41,7 +40,6 @@ const BreakfastMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span className="item">Orange</span>
         <span className="price">$7</span>
@@ -63,7 +61,6 @@ const BreakfastMenu = ({ order, setOrder }) => {
           +
         </button>
       </label>
-      <br />
       <label>
         <span className="item">Caprese</span>
         <span className="price">$15</span>

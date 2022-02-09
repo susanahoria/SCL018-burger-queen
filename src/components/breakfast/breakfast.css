@@ -1,7 +1,4 @@
-/* .price {
-  float: right;
+.menu-breakfast {
+  display: flex;
+  flex-direction: column;
 }
-
-.item {
-  float: left;
-} */

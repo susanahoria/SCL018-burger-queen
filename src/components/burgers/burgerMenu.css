@@ -3,4 +3,15 @@
   box-shadow: inset -6px -6px #006bb3;
   color: #fff;
   border: black;
+  float: right;
+}
+
+.item {
+  float: left;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: -2%;
 }

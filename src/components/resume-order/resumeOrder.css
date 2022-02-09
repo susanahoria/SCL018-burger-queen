@@ -15,7 +15,7 @@
   grid-template-rows: 20% 20% 20% 17% 5% 5% 10% 3%;
   height: 100%;
   width: 32vw;
-  margin-left: -20px;
+  margin-left: -15px;
 }
 
 .title-price {
@@ -65,5 +65,14 @@ li {
   li {
     width: 32vw;
     margin-left: -41px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 10% 10%;
+    grid-template-rows: 20% 20% 20% 17% 5% 5% 10% 3%;
+    height: 100%;
+    width: 32vw;
+    margin-left: -20px;
   }
 }
