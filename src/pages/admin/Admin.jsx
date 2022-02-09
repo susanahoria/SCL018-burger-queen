@@ -8,7 +8,7 @@ const Admin = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState("ROLE");
 
   const signUp = (email, password) => {
     const auth = getAuth(firebase);
@@ -22,7 +22,22 @@ const Admin = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    //validar campos
+    if (name === "") {
+      alert("name empty");
+      return;
+    }
+    if (email === "") {
+      alert("email empty");
+      return;
+    }
+    if (password === "") {
+      alert("password empty");
+      return;
+    }
+    if (role === "ROLE") {
+      alert("role empty");
+      return;
+    }
     try {
       const data = await signUp(email, password);
       await insertToDB(data.user.uid);
@@ -30,7 +45,6 @@ const Admin = () => {
       setEmail("");
       setPassword("");
     } catch (err) {
-      alert("complete campos");
       console.log(err.message);
     }
   };
@@ -38,8 +52,8 @@ const Admin = () => {
   return (
     <>
       <section className="admin-view">
-        <div class="nes-container with-title is-centered form-admin">
-          <p class="title hey-admin">HEY ADMIN!</p>
+        <div className="nes-container with-title is-centered form-admin">
+          <p className="title hey-admin">HEY ADMIN!</p>
           <form onSubmit={submitHandler}>
             <div className="inputs-admin">
               <label htmlFor="name">
@@ -60,9 +74,9 @@ const Admin = () => {
                   <select
                     className="nes-input"
                     onChange={(e) => setRole(e.target.value)}
-                    value={role}
+                    defaultValue={role}
                   >
-                    <option value="" disabled selected hidden>
+                    <option value={"ROLE"} disabled hidden>
                       Role...
                     </option>
                     <option value="CHEF">Chef</option>

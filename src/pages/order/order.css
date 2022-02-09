@@ -1,7 +1,7 @@
 .waiter-view {
   background-image: url(/src/components/images/wallpaper-views.png);
   display: grid;
-  grid-template-columns: 5% 5% 10% 9% 2% 9% 5% 5% 10% 10% 20% 5% 5%;
+  grid-template-columns: 5% 5% 10% 9% 2% 9% 5% 5% 5% 5% 10% 15% 5% 5% 5%;
   grid-template-rows: 5% 5% 4% 3% 2% 4% 14% 20% 10% 3% 7% 5% 3% 5% 5% 5%;
   height: 100vh;
 }
@@ -24,14 +24,13 @@
 .price-title {
   display: table;
   padding: 0 0.5rem;
-  margin: -2.5rem 0 1rem;
+  margin: -2.5rem 0 1rem 65%;
   font-size: 1rem;
   background-color: #fff;
-  margin-left: 80%;
 }
 
 .menu {
-  grid-column: 2/13;
+  grid-column: 2/15;
   grid-row: 2/16;
   background-color: #8db3b8ce;
 }

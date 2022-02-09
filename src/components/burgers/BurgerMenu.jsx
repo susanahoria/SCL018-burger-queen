@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../../src/pages/order/order.css";
+import "./burgerMenu.css";
 
 const BurgerMenu = ({ order, setOrder }) => {
   const [egg, setEgg] = useState(false);
@@ -18,25 +19,26 @@ const BurgerMenu = ({ order, setOrder }) => {
     setOrder([...order]);
     setEgg(false);
     setCheese(false);
-    console.log(order);
   };
   return (
-    <>
+    <div>
       <p>Burgers!</p>
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>Beef burger</span>
         <span>$10</span>
-        <button onClick={() => handleClick({ name: "Beef burger", price: 10 })}>
+        <button
+          className="add-button"
+          onClick={() => handleClick({ name: "Beef burger", price: 10 })}
+        >
           +
         </button>
       </label>
       <br />
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>Chicken burger</span>
         <span>$10</span>
         <button
+          className="add-button"
           onClick={() => handleClick({ name: "Chicken burger", price: 10 })}
         >
           +
@@ -44,10 +46,10 @@ const BurgerMenu = ({ order, setOrder }) => {
       </label>
       <br />
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>veggie burger</span>
         <span>$10</span>
         <button
+          className="add-button"
           onClick={() => handleClick({ name: "Veggie burger", price: 10 })}
         >
           +
@@ -56,6 +58,7 @@ const BurgerMenu = ({ order, setOrder }) => {
       <br />
       <label>
         Extra:
+        <br />
         <input
           type="checkbox"
           className="nes-checkbox"
@@ -67,6 +70,7 @@ const BurgerMenu = ({ order, setOrder }) => {
         <span>Egg</span>
         <span>$1</span>
       </label>
+
       <label>
         <input
           type="checkbox"
@@ -81,41 +85,49 @@ const BurgerMenu = ({ order, setOrder }) => {
       </label>
       <p>Snacks!</p>
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>French fries</span>
         <span>$5</span>
-        <button onClick={() => handleClick({ name: "French fries", price: 5 })}>
+        <button
+          className="add-button"
+          onClick={() => handleClick({ name: "French fries", price: 5 })}
+        >
           +
         </button>
       </label>
       <br />
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>Onion ring</span>
         <span>$5</span>
-        <button onClick={() => handleClick({ name: "Onion ring", price: 5 })}>
+        <button
+          className="add-button"
+          onClick={() => handleClick({ name: "Onion ring", price: 5 })}
+        >
           +
         </button>
       </label>
       <p>Soda!</p>
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>Lemon</span>
         <span>$10</span>
-        <button onClick={() => handleClick({ name: "Lemon", price: 10 })}>
+        <button
+          className="add-button"
+          onClick={() => handleClick({ name: "Lemon", price: 10 })}
+        >
           +
         </button>
       </label>
       <br />
       <label>
-        <input type="checkbox" className="nes-checkbox" />
         <span>Water</span>
         <span>$7</span>
-        <button onClick={() => handleClick({ name: "Water", price: 7 })}>
+        <button
+          className="add-button"
+          onClick={() => handleClick({ name: "Water", price: 7 })}
+        >
           +
         </button>
       </label>
-    </>
+    </div>
   );
 };
 

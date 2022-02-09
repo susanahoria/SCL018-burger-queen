@@ -2,10 +2,13 @@ import "./order.css";
 import BurgerMenu from "../../components/burgers/BurgerMenu";
 import BreakfastMenu from "../../components/breakfast/BreakfastMenu";
 import ResumeOrder from "../../components/resume-order/ResumeOrder";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const OrderPage = () => {
   const [order, setOrder] = useState([]);
+  useEffect(() => {
+    console.log(order);
+  }, [order]);
   const [currentMenu, setCurrentMenu] = useState("breakfast");
   return (
     <section className="waiter-view">
